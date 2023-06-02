@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Menu</title>
+      <style>
+        /* Basic styling for the landing page */
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          background-color: #000000; /* Set the desired background color */
+        }
+        
+    
+        .landing-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100dvh;
+          background-image: url('/images/blackmenu.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          color: #ffffff;
+          font-size: 6px;
+        }
+        /* Styling for the navigation menu */
+        .menu-button {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 9999;
+          background-color: transparent;
+          color: #ff53acd8;
+          border: none;
+          cursor: pointer;
+        }
+    
+        .menu-dropdown {
+          display: none;
+          position: absolute;
+          top: 50px;
+          right: 20px;
+          background-color: #000000;
+          color: #ff53acd8;
+          padding: 20px;
+          z-index: 9999;
+        }
+    
+        .menu-dropdown ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .menu-dropdown li {
+          margin-bottom: 20px;
+        }
+    
+        .menu-dropdown a {
+            color: #ff53acd8;
+          text-decoration: none;
+        }
+        
+        /* Styling for the footer */
+        .footer {
+          background-color: black;
+          color: #ff53acd8; /* Change the text color to white */
+          padding: 20px;
+          text-align: center;
+        }
+        /* Styling for the footer */
+        .page-content {
+          background-color: black;
+          color: #ff53acd8; /* Change the text color to white */
+          padding: 20px;
+          text-align: center;
+        }
+      </style>
+    </head>
+
+
+<body>
+    <div class="landing-image">
+    </div>
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleDropdown()">
+      <span>&#9776;</span>
+    </button>
+  
+  <!-- Dropdown Menu -->
+  <div class="menu-dropdown" id="dropdown">
+    <ul>
+      <li><a href="index.html">Meow Meow</a></li>
+      <li><a href="black.html">Black Cat Menu</a></li>
+      <li><a href="events.html">Dates</a></li>
+    </ul>
+  </div>
+
+  <!-- Menu Page Content -->
+  <div class="page-content">
+    <h1>Mother's Day 2023 Menu @La Dive</h1>
+    <p>The theme for this menu was a black cat<br>
+    “A black cat symbolizes mystery and secrecy,<br>
+        To those fearful of the mysteries, the black<br>
+        cat may represent evil. But lovers of mysteries,<br>
+        magic, and the arts love that aspect of the cat symbolism"<br>
+        - Honigman<br><br><br>
+
+    <p>Japanese Kitten Valkyrie:<br><br>
+        A very personalized martini. Blended gins, blended vermouthes, hint of salt,<br>
+         and bergamot bitters in the place of a zest</p>
+
+    <p>Siamese:<br><br>
+        An attempt to excite the palette. White wine brings some fruit and acidity.<br>
+        Salers from some bitterness and vegetal notes. Apaluz is a mildly smoky mezcal<br>
+        that brings minerality. Garnished with a oily kalamata olive stuffed with a funky bleu cheese</p>
+    
+    <p>Meow Meow Drink Time:<br><br>
+        Our namesake is a coconut milk clairified cocktail<br>
+        This cocktail is the love child of a 'last word' and a 'corn and oil'<br>
+        Fun, silky, wild yet restrained. This is an indoor out cat.</p>
+
+    <p>Polka Dot Tiger:<br><br>
+        We wanted to make a mauby hurricane. Mauby is like inverted sangria that is aged on wood<br>
+        which makes it a drinking bitters. Our batch was not started in time for this testing popup,<br>
+        this cocktail is still evoling.</p>
+
+    <p>Scaredy Cat:<br><br>
+        Originally named 'I am not a negroni'. Using the classic combination of gin, campari,<br>
+        and sweet vermouth just in a very different ratio. Scaredy Cat drinks like an fruitier old fashioned,<br>
+        or a timid manhattan
+    </p>
+
+    <p>Fancy Feast:<br><br>
+        Boilermakers are like ready to eat meals. The blend of becherovka and batavia arrack is fun!<br>
+        Amaro Nonino has stepped in since becherovka is back ordered. The ratio is not longer 50:50<br>
+        Nonino is sweeter and more complex than becherovka. <br>
+        Paired with a pony of high life for some easy drinking<br>
+    
+        </div>
+
+ <!-- JavaScript to toggle the dropdown menu -->
+ <script>
+  function toggleDropdown() {
+    var dropdown = document.getElementById("dropdown");
+    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+  }
+</script>
+
+</body>
+</html>
