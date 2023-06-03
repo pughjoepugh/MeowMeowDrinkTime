@@ -1,97 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/main/images/favicon.png" sizes="32x32"> /* tab icon */
-      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/main/images/favicon.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   
-  <title>Upcoming Events</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here if you have one -->
-  <style>
-    
-        /* Basic styling for the landing page */
-    
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="styles.css">
+  
+    <style>
+        /* Basic styling for the page */
         body {
           background-color: #000000;
           color: #ff53acd8;
           font-family: "Lato", sans-serif;
           text-align: center;
         }
-    
-       /* Styling for the navigation menu */
-    
-        .menu-button {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          z-index: 9999;
-          background-color: transparent;
-          color: #ff53acd8;
-          border: none;
-          cursor: pointer;
-        }
-    
-        .menu-dropdown {
-          display: none;
-          position: absolute;
-          top: 50px;
-          right: 20px;
-          background-color: #000000;
-          color: #ff53acd8;
-          padding: 20px;
-          z-index: 9999;
-        }
-    
-        .menu-dropdown ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-    
-        .menu-dropdown li {
-          margin-bottom: 20px;
-        }
-    
-        .menu-dropdown a {
-            color: #ff53acd8;
-          text-decoration: none;
-        }
- 
+  
         .container {
           max-width: 800px;
           margin: 0 auto;
           padding: 40px;
         }
-
+    </style>
 </head>
 <body>
- <div class="container">
-  <h1>Dates coming soon. Wanna get some Brunch?</h1>
-  <p>Stay tuned for upcoming event dates where you can join us for a delicious experience.</p>
-</div>
-        
+    <div class="container">
+        <h1>Dates coming soon. Wanna get some Brunch?</h1>
+        <p>Stay tuned for upcoming event dates where you can join us for a delicious experience.</p>
+    </div>
 
     <!-- Menu Button -->
     <button class="menu-button" onclick="toggleDropdown()">
-      <span>&#9776;</span>
+        <span>&#9776;</span>
     </button>
   
-  <!-- Dropdown Menu -->
-  <div class="menu-dropdown" id="dropdown">
-    <ul>
-      <li><a href="index.html">Meow Meow</a></li>
-      <li><a href="black.html">Black Cat Menu</a></li>
-      <li><a href="events.html">Dates</a></li>
-    </ul>
-  </div>
+    <!-- Dropdown Menu -->
+    <div class="menu-dropdown" id="dropdown">
+        <ul>
+            <li><a href="index.html">Meow Meow</a></li>
+            <li><a href="black.html">Black Cat Menu</a></li>
+            <li><a href="events.html">Dates</a></li>
+        </ul>
+    </div>
 
-  
-<!-- JavaScript to toggle the dropdown menu -->
-<script>
-  function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-  }
-</script>
-
+    <!-- JavaScript to toggle the dropdown menu -->
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
