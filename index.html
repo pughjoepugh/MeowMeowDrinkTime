@@ -1,135 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/main/images/favicon.png" sizes="32x32" alt="Meow Meow Drink Time">
-
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> /* adding a font */
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
   <title>Meow Meow Drink Time</title>
   <style>
+    <!-- Add your meta tags, CSS, and other head elements here -->
     /* Basic styling for the landing page */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000000; /* Set the desired background color */
-    }
-    
-    /* Styles for screens up to 768 pixels wide (e.g., mobile devices) */
-@media (max-width: 768px) {
-  /* Adjust styles for smaller screens */
-  .landing-image {
-     max-width: 100%;
-    /* Modify styles for the landing image container */
-  }
-  /* Add more styles for other elements as needed */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+/* Styling for the landing image */ 
+
+.landing-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-image: url('/images/landing-2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: #ffffff;
+  font-size: 6px;
+}
+    /* Styling for the navigation menu */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 9999;
+    background-color: transparent;
+    color: #ff53acd8;
+    border: none;
+    cursor: pointer;
+    font-size: 45px;
 }
 
-    
+/* Styles for screens up to 768 pixels wide (e.g., mobile devices) */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    /* Add more styles for other elements as needed */
+}
 
-    .landing-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100vh;
-      background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/82312e5398c173b1b9598cecedca99dea239803d/images/landing-2.jpg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: auto;
-      color: #ffffff;
-      font-size: 6px;
-     
-    }
-    /* Styling for the navigation menu */
-    .menu-button {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      z-index: 9999;
-      background-color: transparent;
-      color: #ff53acd8;;
-      border: none;
-      cursor: pointer;
-      font-size: 45px;
-    }
+/* Styling for header and other sections */
+header, section, footer {
+    padding: 20px;
+}
 
-    .menu-dropdown {
-      display: none;
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      background-color: #000000;
-      color: #ff53acd8;;
-      padding: 20px;
-      z-index: 9999;
-    }
+/* Additional styles for individual sections */
+#home {
+    /* Landing section styles go here */
+}
 
-    .menu-dropdown ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+#about {
+    /* About section styles go here */
+}
 
-    .menu-dropdown li {
-      margin-bottom: 20px;
-    }
+#menu {
+    /* Menu section styles go here */
+}
 
-    .menu-dropdown a {
-      color: #ff53acd8;
-      text-decoration: none;
-    }
+#contact {
+    /* Contact section styles go here */
+}
 
-    
-    /* Styling for the footer */
+/* Styling for the footer */
     .footer {
       background-color: black;
-      font-family: 'Pacifico', cursive;
-      font-size: 22px; /* Adjust the font size as needed */
       color: #ff53acd8; /* Change the text color to white */
       padding: 20px;
       text-align: center;
-
     }
-  </style>
+<script>
+  // Smooth scrolling when clicking on navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+</style>
 </head>
-
 <body>
-  <div class="landing-image">
-  </div>
-  <!-- Menu Button -->
-  <button class="menu-button" onclick="toggleDropdown()">
-    <span>&#9776;</span>
-  </button>
+    <header>
+        <!-- Header content goes here -->
+    </header>
 
-  <!-- Dropdown Menu -->
-  <div class="menu-dropdown" id="dropdown">
-    <ul>
-      <li><a href="index.html">Meow Meow</a></li>
-      <li><a href="black.html">Black Cat Menu</a></li>
-      <li><a href="events.html">Dates</a></li>
-    </ul>
-  </div>
+    <section id="home">
+        <!-- Landing section content goes here -->
+    </section>
 
-  <!-- Rest of your content goes here -->
+    <section id="about">
+        <!-- About section content goes here -->
+    </section>
 
-  <footer class="footer">
+    <section id="menu">
+        <!-- Menu section content goes here -->
+    </section>
+
+    <footer class="footer">
     <p>Contact us: @MeowMeowDrinkTime on instagram<br><br>
       Created by Joe & Suzy
       </p>
   </footer>
-  
-<!-- JavaScript to toggle the dropdown menu -->
-<script>
-  function toggleDropdown() {
-    var dropdown = document.getElementById("dropdown");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-  }
-</script>
-
 </body>
 </html>
