@@ -77,7 +77,7 @@ p {
 .about-us-section {
     background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
     padding: 30px;
-    margin-top: 50px; /* Space above the section */
+    margin-top: 75vh; /* Space above the section */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center; /* Center the heading */
