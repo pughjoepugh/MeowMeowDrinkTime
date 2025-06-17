@@ -14,16 +14,16 @@ body {
 
     /* Content width and spacing */
     max-width: 960px; /* Allows content to shrink on smaller screens */
-    margin: 0 auto;   /* Centers the content horizontally */
-    padding: 20px;    /* Adds padding around the content, crucial for mobile */
+    margin: 0 auto;   /* Centers the content horizontally */
+    padding: 20px;    /* Adds padding around the content, crucial for mobile */
     box-sizing: border-box; /* Include padding and border in element's total width/height */
 }
 
 /* Make All Images Responsive */
 img {
     max-width: 100%; /* Ensures images never overflow their parent container */
-    height: auto;    /* Maintains the image's aspect ratio */
-    display: block;  /* Helps with layout and removes extra space below images */
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Helps with layout and removes extra space below images */
 }
 
 /* Adjust Main Heading (h1, h2, etc.) */
@@ -59,26 +59,50 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%; /* Ensure it always takes full width available */
-    min-height: 600px; /* A minimum height for desktop, important for full images */
-    min-height: 70vh; /* Use min-height to ensure it's at least 70% of viewport height, but can grow */
+    /* Removed redundant min-height: 600px; */
+    height: 70vh; /* Primary responsive height */
+    min-height: 400px; /* Set a more robust minimum height for smaller screens/devices */
     max-height: 800px; /* Prevent it from getting too tall on very large screens */
     background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/82312e5398c173b1b9598cecedca99dea239803d/images/landing-2.jpg'); /* Confirm this URL is correct */
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: cover; /* Change to cover to ensure it fills the space responsively */
-    color: #ffffff;
+    background-size: cover; /* Ensures it fills the space responsively */
+    color: #ffffff; /* Keep this if you ever add text directly into the div */
+    /* Removed font-size: 6px; as it's likely not needed for an image-based title */
     padding: 40px 20px; /* Top/bottom, left/right */
     text-align: center; /* Center any text within it */
 }
-<section class="about-us-section">
-    <h2>Our Story at Meow Meow Drink Time</h2>
-    <button class="collapsible-button" aria-expanded="false" aria-controls="aboutUsContent">Read More</button>
-    <div class="collapsible-content" id="aboutUsContent" hidden>
-        <p>Welcome to Meow Meow Drink Time! We're Joe and Suzy, two cat enthusiasts who love crafting unique and delicious beverages. Our journey began with a simple idea: combine our passion for adorable felines with our knack for creating delightful drinks. What started as a fun experiment for friends quickly blossomed into a pop-up concept, bringing joy (and tasty sips!) to local communities.</p>
-        <p>At Meow Meow Drink Time, every drink is made with love and a sprinkle of cat-inspired magic. We focus on fresh ingredients, innovative flavors, and a cozy atmosphere that celebrates all things feline. Whether you're a coffee connoisseur, a tea lover, or looking for a refreshing sparkling concoction, we have something special brewed just for you.</p>
-        <p>Join us on this purr-fect adventure! We look forward to sharing our passion for great drinks and cute cats with you. Keep an eye on our Instagram for upcoming pop-up dates and locations!</p>
-    </div>
-</section>
+
+---
+
+/* --- About Us Section Styling --- */
+.about-us-section {
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+    padding: 30px;
+    margin-top: 50px; /* Space above the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the text within the section */
+}
+
+.about-us-section h2 {
+    margin-top: 0; /* Override default h2 margin to prevent excessive top space */
+    margin-bottom: 25px; /* Space below the heading */
+}
+
+/* Collapsible Content Styling (now always visible) */
+.collapsible-content {
+    padding-top: 15px; /* Space between the heading and content */
+    text-align: left; /* Ensure paragraphs are left-aligned */
+}
+
+.collapsible-content p {
+    text-align: left; /* Make paragraphs left-aligned within the collapsible */
+    padding: 0 10px; /* Some horizontal padding for readability */
+    margin-bottom: 1em; /* Standard paragraph spacing */
+}
+
+---
 
 /* --- Our Drinks Menu Section Styling --- */
 .menu-section {
@@ -140,35 +164,6 @@ p {
     margin-right: auto;
 }
 
-/* Adjust media query for menu section on smaller screens */
-@media (max-width: 768px) {
-    .menu-section {
-        padding: 30px 15px; /* Less padding on mobile */
-    }
-
-    .menu-section h2 {
-        font-size: 2em; /* Smaller main heading on mobile */
-        margin-bottom: 30px;
-    }
-
-    .menu-category {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-
-    .menu-category h3 {
-        font-size: 1.6em; /* Smaller category heading on mobile */
-        margin-bottom: 15px;
-    }
-
-    .drink-item h4 {
-        font-size: 1.4em; /* Smaller drink name on mobile */
-    }
-
-    .drink-item p {
-        font-size: 0.95em; /* Slightly smaller description on mobile */
-    }
-}
 
 /* Styling for the footer */
 .footer {
@@ -231,6 +226,8 @@ p {
     margin-top: 50px; /* Add some space above the footer */
 }
 
+---
+
 /* --- Media Queries for Mobile Responsiveness --- */
 
 @media (max-width: 768px) { /* Styles apply when screen width is 768px or less */
@@ -257,10 +254,54 @@ p {
         min-height: 400px;
         height: 60vh; /* Adjust height for mobile landing image */
         background-position: center top;
+        /* Removed font-size: 4px; for mobile */
         padding: 20px 10px; /* Less padding on very small screens */
     }
 
-    
+    /* About Us section mobile adjustments */
+    .about-us-section {
+        padding: 20px;
+    }
+    .about-us-section h2 {
+        font-size: 2em; /* Smaller heading on mobile */
+        margin-bottom: 20px;
+    }
+    .collapsible-button { /* This rule is now obsolete but leaving as a placeholder if you commented it out. Can remove it entirely. */
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    .collapsible-content p { /* Adjust paragraphs within content on mobile */
+        padding: 0 5px;
+    }
+
+    /* Our Drinks menu section mobile adjustments */
+    .menu-section {
+        padding: 30px 15px; /* Less padding on mobile */
+    }
+
+    .menu-section h2 {
+        font-size: 2em; /* Smaller main heading on mobile */
+        margin-bottom: 30px;
+    }
+
+    .menu-category {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .menu-category h3 {
+        font-size: 1.6em; /* Smaller category heading on mobile */
+        margin-bottom: 15px;
+    }
+
+    .drink-item h4 {
+        font-size: 1.4em; /* Smaller drink name on mobile */
+    }
+
+    .drink-item p {
+        font-size: 0.95em; /* Slightly smaller description on mobile */
+    }
+
     .footer {
         font-size: 18px; /* Smaller footer text on mobile */
         padding: 15px;
