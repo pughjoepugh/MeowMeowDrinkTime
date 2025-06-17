@@ -59,54 +59,115 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%; /* Ensure it always takes full width available */
+    min-height: 600px; /* A minimum height for desktop, important for full images */
     min-height: 70vh; /* Use min-height to ensure it's at least 70% of viewport height, but can grow */
+    max-height: 800px; /* Prevent it from getting too tall on very large screens */
     background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/82312e5398c173b1b9598cecedca99dea239803d/images/landing-2.jpg'); /* Confirm this URL is correct */
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover; /* Change to cover to ensure it fills the space responsively */
     color: #ffffff;
-    font-size: 6px; /* This font size is very small, we'll address overall typography soon */
     padding: 40px 20px; /* Top/bottom, left/right */
     text-align: center; /* Center any text within it */
 }
+<section class="about-us-section">
+    <h2>Our Story at Meow Meow Drink Time</h2>
+    <button class="collapsible-button" aria-expanded="false" aria-controls="aboutUsContent">Read More</button>
+    <div class="collapsible-content" id="aboutUsContent" hidden>
+        <p>Welcome to Meow Meow Drink Time! We're Joe and Suzy, two cat enthusiasts who love crafting unique and delicious beverages. Our journey began with a simple idea: combine our passion for adorable felines with our knack for creating delightful drinks. What started as a fun experiment for friends quickly blossomed into a pop-up concept, bringing joy (and tasty sips!) to local communities.</p>
+        <p>At Meow Meow Drink Time, every drink is made with love and a sprinkle of cat-inspired magic. We focus on fresh ingredients, innovative flavors, and a cozy atmosphere that celebrates all things feline. Whether you're a coffee connoisseur, a tea lover, or looking for a refreshing sparkling concoction, we have something special brewed just for you.</p>
+        <p>Join us on this purr-fect adventure! We look forward to sharing our passion for great drinks and cute cats with you. Keep an eye on our Instagram for upcoming pop-up dates and locations!</p>
+    </div>
+</section>
 
-/* Styling for the navigation menu */
-.menu-button {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    z-index: 9999;
-    background-color: transparent;
-    color: #ff53acd8;
-    border: none;
-    cursor: pointer;
-    font-size: 45px;
+/* --- Our Drinks Menu Section Styling --- */
+.menu-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    padding: 40px 20px; /* Good padding for desktop, adjusted for mobile via media query */
+    margin-top: 50px; /* Space above the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center main heading */
 }
 
-.menu-dropdown {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    background-color: #000000;
-    color: #ff53acd8;
-    padding: 20px;
-    z-index: 9999;
+.menu-section h2 {
+    margin-bottom: 40px; /* More space below main menu heading */
 }
 
-.menu-dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.menu-category {
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle lighter background for categories */
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px; /* Space between categories */
+    text-align: center; /* Ensure contents are centered within category */
 }
 
-.menu-dropdown li {
-    margin-bottom: 20px;
+.menu-category h3 {
+    font-family: 'Pacifico', cursive; /* Use Pacifico for category headings */
+    font-size: 1.8em;
+    color: #ff53acd8; /* Your accent color */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 25px; /* Space below category heading */
 }
 
-.menu-dropdown a {
-    color: #ff53acd8;
-    text-decoration: none;
+.drink-item {
+    margin-bottom: 25px; /* Space between individual drink items */
+    padding-bottom: 15px; /* Padding at the bottom of each item */
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2); /* Dashed separator */
+}
+
+.drink-item:last-child {
+    border-bottom: none; /* No separator for the last item in a category */
+    margin-bottom: 0; /* No bottom margin for the last item in a category */
+    padding-bottom: 0;
+}
+
+.drink-item h4 {
+    font-family: 'Pacifico', cursive; /* Use Pacifico for drink names */
+    font-size: 1.6em;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 5px; /* Less space between name and description */
+}
+
+.drink-item p {
+    font-size: 1em; /* Standard font size for descriptions */
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted white for descriptions */
+    line-height: 1.5;
+    text-align: center; /* Ensure descriptions are centered */
+    max-width: 600px; /* Limit description width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Adjust media query for menu section on smaller screens */
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 30px 15px; /* Less padding on mobile */
+    }
+
+    .menu-section h2 {
+        font-size: 2em; /* Smaller main heading on mobile */
+        margin-bottom: 30px;
+    }
+
+    .menu-category {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .menu-category h3 {
+        font-size: 1.6em; /* Smaller category heading on mobile */
+        margin-bottom: 15px;
+    }
+
+    .drink-item h4 {
+        font-size: 1.4em; /* Smaller drink name on mobile */
+    }
+
+    .drink-item p {
+        font-size: 0.95em; /* Slightly smaller description on mobile */
+    }
 }
 
 /* Styling for the footer */
@@ -193,28 +254,13 @@ p {
     }
 
     .landing-image {
-        min-height: 60vh; /* Adjust height for mobile landing image */
-        font-size: 4px; /* Still very small, consider what text goes here */
+        min-height: 400px;
+        height: 60vh; /* Adjust height for mobile landing image */
+        background-position: center top;
         padding: 20px 10px; /* Less padding on very small screens */
     }
 
-    /* Adjustments for menu button and dropdown on mobile */
-    .menu-button {
-        top: 15px; /* Move button closer to top */
-        right: 15px; /* Move button closer to right */
-        font-size: 35px; /* Smaller button on mobile */
-    }
-
-    .menu-dropdown {
-        top: 45px; /* Adjust dropdown position relative to button */
-        right: 10px; /* Adjust dropdown position relative to button */
-        padding: 10px; /* Less padding in dropdown */
-    }
-
-    .menu-dropdown li {
-        margin-bottom: 10px; /* Less space between menu items */
-    }
-
+    
     .footer {
         font-size: 18px; /* Smaller footer text on mobile */
         padding: 15px;
