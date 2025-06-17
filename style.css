@@ -2,10 +2,10 @@
 body {
     /* Background adjustments */
     background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg'); /* Using the confirmed direct URL for landing-2.jpg */
-    background-size: contain; /* Ensures the entire image is visible, might have bars */
-    background-position: center; /* Centers the background image */
+    background-size: auto; /* Ensures the entire image is visible, might have bars */
+    background-position: center top; /* Centers the background image */
     background-repeat: no-repeat; /* NEW: Prevents the background image from repeating */
-    background-attachment: scroll; /* Background scrolls with the content */
+    background-attachment: fixed; /* Background scrolls with the content */
     background-color: #000000; /* Fallback color for background */
 
     /* Text and layout basics */
@@ -217,13 +217,11 @@ p {
 
 /* Further update for the main .footer itself */
 .footer {
-    background-color: rgba(0, 0, 0, 0.7); /* Ensure footer itself uses transparent background */
+    background-color: rgba(0, 0, 0, 0.05); /* Ensure footer itself uses transparent background */
     font-family: 'Pacifico', cursive; /* Keep for the overall footer feel if desired */
-    font-size: 22px; /* Adjust the font size as needed */
+    font-size: 14px; /* Adjust the font size as needed */
     color: #ff53acd8; /* Your accent color */
-    padding: 20px;
     text-align: center;
-    margin-top: 50px; /* Add some space above the footer */
 }
 
 ---
