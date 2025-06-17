@@ -5,6 +5,7 @@ body {
     background-size: auto; /* Ensures the entire image is visible, might have bars */
     background-position: center top; /* Centers the background image */
     background-attachment: fixed; /* Background scrolls with the content */
+    background-repeat: no-repeat;
     background-color: #000000; /* Fallback color for background */
 
     /* Text and layout basics */
