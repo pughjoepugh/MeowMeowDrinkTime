@@ -1,8 +1,8 @@
 /* Basic styling for the landing page */
 body {
     /* Background adjustments */
-    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg'); /* CORRECTED: Using the confirmed direct URL for landing-2.jpg */
-    background-size: contain; /* Ensures the entire image is visible, might have bars */
+    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg');
+    background-size: cover; /* Ensures the entire image is visible, might have bars */
     background-position: center; /* Centers the background image */
     background-attachment: scroll; /* Background scrolls with the content */
     background-color: #000000; /* Fallback color for background */
