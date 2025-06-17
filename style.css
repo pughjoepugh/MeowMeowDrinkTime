@@ -42,14 +42,15 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5em; /* Slightly smaller for sub-sections */
+    /* Updated font size for h2 elements (Our Story, Our Delicious Drinks) */
+    font-size: 2em; /* Adjusted to be slightly smaller */
 }
 
 /* Adjust font size for paragraphs for better readability */
 p {
     font-size: 1.1em; /* Slightly larger for easier reading */
     line-height: 1.8; /* More spacing between lines */
-    text-align: center; /* Keep paragraphs centered */
+    /* text-align: center; <--- REMOVED: Now managed by individual sections */
     margin-bottom: 25px; /* More space below paragraphs */
 }
 
@@ -59,21 +60,18 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%; /* Ensure it always takes full width available */
-    /* Removed redundant min-height: 600px; */
-    height: 70vh; /* Primary responsive height */
+    height: 70vh; /* Responsive height: 70% of viewport height */
     min-height: 400px; /* Set a more robust minimum height for smaller screens/devices */
     max-height: 800px; /* Prevent it from getting too tall on very large screens */
-    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/82312e5398c173b1b9598cecedca99dea239803d/images/landing-2.jpg'); /* Confirm this URL is correct */
-    background-position: center top;
+    /* Updated background-image URL to ensure the correct version with text visibility */
+    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/main/images/landing_image.png'); /* Ensure this is your correct image path */
+    background-position: center top; /* Focus on the top part of the image to prevent text cutoff */
     background-repeat: no-repeat;
     background-size: cover; /* Ensures it fills the space responsively */
-    color: #ffffff; /* Keep this if you ever add text directly into the div */
-    /* Removed font-size: 6px; as it's likely not needed for an image-based title */
-    padding: 40px 20px; /* Top/bottom, left/right */
-    text-align: center; /* Center any text within it */
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
 }
-
----
 
 /* --- About Us Section Styling --- */
 .about-us-section {
@@ -82,7 +80,7 @@ p {
     margin-top: 50px; /* Space above the section */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center the text within the section */
+    text-align: center; /* Center the heading */
 }
 
 .about-us-section h2 {
@@ -93,16 +91,14 @@ p {
 /* Collapsible Content Styling (now always visible) */
 .collapsible-content {
     padding-top: 15px; /* Space between the heading and content */
-    text-align: left; /* Ensure paragraphs are left-aligned */
+    text-align: left; /* NEW: Left align text for About Us paragraphs */
 }
 
 .collapsible-content p {
-    text-align: left; /* Make paragraphs left-aligned within the collapsible */
+    text-align: left; /* NEW: Make paragraphs left-aligned within the About Us content */
     padding: 0 10px; /* Some horizontal padding for readability */
     margin-bottom: 1em; /* Standard paragraph spacing */
 }
-
----
 
 /* --- Our Drinks Menu Section Styling --- */
 .menu-section {
@@ -115,6 +111,7 @@ p {
 }
 
 .menu-section h2 {
+    /* Will inherit h2 font-size: 2em; from general h2 rule, aligning with About Us h2 */
     margin-bottom: 40px; /* More space below main menu heading */
 }
 
@@ -123,7 +120,7 @@ p {
     border-radius: 8px;
     padding: 25px;
     margin-bottom: 30px; /* Space between categories */
-    text-align: center; /* Ensure contents are centered within category */
+    text-align: left; /* NEW: Left align contents within category for drink entries */
 }
 
 .menu-category h3 {
@@ -132,11 +129,12 @@ p {
     color: #ff53acd8; /* Your accent color */
     margin-top: 0; /* Remove default top margin */
     margin-bottom: 25px; /* Space below category heading */
+    text-align: center; /* NEW: Keep category heading centered */
 }
 
 .drink-item {
-    margin-bottom: 25px; /* Space between individual drink items */
-    padding-bottom: 15px; /* Padding at the bottom of each item */
+    margin-bottom: 15px; /* Adjusted space between individual drink items for single spacing */
+    padding-bottom: 10px; /* Adjusted padding at the bottom of each item */
     border-bottom: 1px dashed rgba(255, 255, 255, 0.2); /* Dashed separator */
 }
 
@@ -148,20 +146,22 @@ p {
 
 .drink-item h4 {
     font-family: 'Pacifico', cursive; /* Use Pacifico for drink names */
-    font-size: 1.6em;
+    font-size: 1.8em; /* NEW: Slightly larger for cocktail names */
     color: white;
     margin-top: 0;
-    margin-bottom: 5px; /* Less space between name and description */
+    margin-bottom: 0px; /* NEW: No margin below name for tight spacing */
+    line-height: 1.2; /* Tighter line height for the name */
 }
 
 .drink-item p {
-    font-size: 1em; /* Standard font size for descriptions */
+    font-size: 0.9em; /* NEW: Smaller font size for descriptions */
     color: rgba(255, 255, 255, 0.8); /* Slightly muted white for descriptions */
-    line-height: 1.5;
-    text-align: center; /* Ensure descriptions are centered */
+    line-height: 1.4; /* NEW: Tighter line height for single spacing */
+    text-align: left; /* NEW: Left align drink descriptions */
     max-width: 600px; /* Limit description width for readability */
-    margin-left: auto;
+    margin-left: 0; /* NEW: Remove auto margin for left alignment */
     margin-right: auto;
+    margin-bottom: 0.5em; /* Small margin for spacing between description lines */
 }
 
 
@@ -186,14 +186,14 @@ p {
 
 .social-links p {
     font-family: 'Pacifico', cursive; /* Use your Pacifico font for the "Follow Us" text */
-    font-size: 1.5em; /* Larger font size */
+    font-size: 1.2em; /* NEW: Smaller font size for "Follow Us" text */
     color: #ff53acd8; /* Your accent color */
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Adjusted margin */
 }
 
 .social-links a {
     display: inline-block; /* Allows side-by-side icons */
-    margin: 0 15px; /* Spacing between icons */
+    margin: 0 10px; /* NEW: Slightly less spacing between icons */
     transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
@@ -202,7 +202,7 @@ p {
 }
 
 .social-icon {
-    width: 50px; /* Size of the social media icons */
+    width: 40px; /* NEW: Smaller size for social media icons */
     height: auto;
 }
 
@@ -222,7 +222,6 @@ p {
     color: #ff53acd8; /* Your accent color */
     padding: 20px;
     text-align: center;
-    /* Remove redundant margin-bottom here if you have it from other rules, or add it for spacing */
     margin-top: 50px; /* Add some space above the footer */
 }
 
@@ -241,7 +240,7 @@ p {
     }
 
     h2 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Adjusted h2 size for mobile too */
         margin-top: 25px;
     }
 
@@ -253,8 +252,7 @@ p {
     .landing-image {
         min-height: 400px;
         height: 60vh; /* Adjust height for mobile landing image */
-        background-position: center top;
-        /* Removed font-size: 4px; for mobile */
+        background-position: center top; /* Ensure top focus on mobile too */
         padding: 20px 10px; /* Less padding on very small screens */
     }
 
@@ -263,12 +261,8 @@ p {
         padding: 20px;
     }
     .about-us-section h2 {
-        font-size: 2em; /* Smaller heading on mobile */
+        font-size: 1.8em; /* Smaller heading on mobile */
         margin-bottom: 20px;
-    }
-    .collapsible-button { /* This rule is now obsolete but leaving as a placeholder if you commented it out. Can remove it entirely. */
-        font-size: 1em;
-        padding: 10px 20px;
     }
     .collapsible-content p { /* Adjust paragraphs within content on mobile */
         padding: 0 5px;
@@ -280,7 +274,7 @@ p {
     }
 
     .menu-section h2 {
-        font-size: 2em; /* Smaller main heading on mobile */
+        font-size: 1.8em; /* Smaller main heading on mobile, same as About Us h2 */
         margin-bottom: 30px;
     }
 
@@ -295,15 +289,23 @@ p {
     }
 
     .drink-item h4 {
-        font-size: 1.4em; /* Smaller drink name on mobile */
+        font-size: 1.6em; /* Adjusted drink name size for mobile */
     }
 
     .drink-item p {
-        font-size: 0.95em; /* Slightly smaller description on mobile */
+        font-size: 0.85em; /* Adjusted smaller description on mobile */
     }
 
     .footer {
-        font-size: 18px; /* Smaller footer text on mobile */
+        font-size: 16px; /* Smaller footer text on mobile */
         padding: 15px;
+    }
+
+    .social-links p {
+        font-size: 1.1em; /* Smaller "Follow Us" on mobile */
+    }
+
+    .social-icon {
+        width: 30px; /* Smaller social icons on mobile */
     }
 }
