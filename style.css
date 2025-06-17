@@ -2,9 +2,9 @@
 body {
     /* Background adjustments */
     background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg');
-    background-size: cover; /* Ensures the entire image is visible, might have bars */
-    background-position: center; /* Centers the background image */
-    background-attachment: scroll; /* Background scrolls with the content */
+    background-size: auto; /* Ensures the entire image is visible, might have bars */
+    background-position: center top; /* Centers the background image */
+    background-attachment: fixed; /* Background scrolls with the content */
     background-color: #000000; /* Fallback color for background */
 
     /* Text and layout basics */
@@ -166,7 +166,7 @@ p {
 
 /* Styling for the footer */
 .footer {
-    background-color: black;
+     background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
     font-family: 'Pacifico', cursive;
     font-size: 22px; /* Adjust the font size as needed */
     color: #ff53acd8; /* Change the text color to white */
