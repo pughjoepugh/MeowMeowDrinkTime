@@ -1,10 +1,10 @@
 /* Basic styling for the landing page */
 body {
     /* Background adjustments */
-    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg'); /* Confirm this path is correct relative to style.css */
+    background-image: url("images/catastronaut.jpg"); /* Confirm this path is correct relative to style.css */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the background image */
-    background-attachment: fixed; /* Keeps background fixed when scrolling */
+    background-attachment: scroll; /* Keeps background fixed when scrolling */
     background-color: #000000; /* Fallback color for background */
 
     /* Text and layout basics */
@@ -180,7 +180,7 @@ p {
     margin-top: 30px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background for the section */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background for the section */
     border-radius: 8px; /* Slightly rounded corners */
 }
 
