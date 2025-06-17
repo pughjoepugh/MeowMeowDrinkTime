@@ -2,7 +2,7 @@
 body {
     /* Background adjustments */
     background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/main/images/landing_image.png'); /* Confirm this path is correct relative to style.css */
-    background-size: cover; /* Ensures the image covers the entire background */
+    background-size: contain; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the background image */
     background-attachment: scroll; /* Keeps background fixed when scrolling */
     background-color: #000000; /* Fallback color for background */
