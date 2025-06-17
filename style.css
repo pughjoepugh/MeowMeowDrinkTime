@@ -180,7 +180,7 @@ p {
     margin-top: 30px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background for the section */
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent background for the section */
     border-radius: 8px; /* Slightly rounded corners */
 }
 
@@ -302,7 +302,7 @@ p {
     }
 
     .social-links p {
-        font-size: 1.1em; /* Smaller "Follow Us" on mobile */
+        font-size: 0.8em; /* Smaller "Follow Us" on mobile */
     }
 
     .social-icon {
