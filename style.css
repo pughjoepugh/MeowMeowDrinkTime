@@ -1,11 +1,11 @@
 /* Basic styling for the landing page */
 body {
     /* Background adjustments */
-    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg');
-    background-size: auto; /* Ensures the entire image is visible, might have bars */
-    background-position: center top; /* Centers the background image */
-    background-attachment: fixed; /* Background scrolls with the content */
-    background-repeat: no-repeat;
+    background-image: url('https://raw.githubusercontent.com/pughjoepugh/MeowMeowDrinkTime/5ddcd6d35e4b3fe29609d5248a9e0723ae35376c/images/landing-2.jpg'); /* Using the confirmed direct URL for landing-2.jpg */
+    background-size: contain; /* Ensures the entire image is visible, might have bars */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* NEW: Prevents the background image from repeating */
+    background-attachment: scroll; /* Background scrolls with the content */
     background-color: #000000; /* Fallback color for background */
 
     /* Text and layout basics */
@@ -121,7 +121,7 @@ p {
     border-radius: 8px;
     padding: 25px;
     margin-bottom: 30px; /* Space between categories */
-    text-align: center; /* CORRECTED: Center align contents within category */
+    text-align: center; /* Center align contents within category */
 }
 
 .menu-category h3 {
@@ -152,7 +152,7 @@ p {
     margin-top: 0;
     margin-bottom: 0px; /* No margin below name for tight spacing */
     line-height: 1.2; /* Tighter line height for the name */
-    text-align: center; /* CORRECTED: Center the cocktail name */
+    text-align: center; /* Center the cocktail name */
 }
 
 .drink-item p {
@@ -161,18 +161,19 @@ p {
     line-height: 1.4; /* Tighter line height for single spacing */
     text-align: left; /* Keep left align for drink descriptions for readability */
     max-width: 500px; /* Limit description width for readability */
-    margin: 0 auto 0.5em auto; /* CORRECTED: Center the paragraph block itself, with small bottom margin */
+    margin: 0 auto 0.5em auto; /* Center the paragraph block itself, with small bottom margin */
 }
 
 
 /* Styling for the footer */
 .footer {
-     background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* NEW: Make footer transparent */
     font-family: 'Pacifico', cursive;
     font-size: 22px; /* Adjust the font size as needed */
     color: #ff53acd8; /* Change the text color to white */
     padding: 20px;
     text-align: center;
+    margin-top: 50px; /* Add some space above the footer */
 }
 /* --- Social Links Styling --- */
 .social-links {
@@ -180,7 +181,7 @@ p {
     margin-top: 30px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* CORRECTED: Match the menu section's transparency */
+    background-color: rgba(0, 0, 0, 0.7); /* Match the menu section's transparency */
     border-radius: 8px; /* Slightly rounded corners */
 }
 
@@ -216,7 +217,7 @@ p {
 
 /* Further update for the main .footer itself */
 .footer {
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* Ensure footer itself uses transparent background */
     font-family: 'Pacifico', cursive; /* Keep for the overall footer feel if desired */
     font-size: 22px; /* Adjust the font size as needed */
     color: #ff53acd8; /* Your accent color */
@@ -240,4 +241,72 @@ p {
     }
 
     h2 {
-        font-size: 1.8em; /* Adjusted h2
+        font-size: 1.8em; /* Adjusted h2 size for mobile too */
+        margin-top: 25px;
+    }
+
+    p {
+        font-size: 1em; /* Standard size for mobile paragraphs */
+        line-height: 1.7;
+    }
+
+    .landing-image {
+        min-height: 400px;
+        height: 60vh; /* Adjust height for mobile landing image */
+        background-position: center top; /* Ensure top focus on mobile too */
+        padding: 20px 10px; /* Less padding on very small screens */
+    }
+
+    /* About Us section mobile adjustments */
+    .about-us-section {
+        padding: 20px;
+    }
+    .about-us-section h2 {
+        font-size: 1.8em; /* Smaller heading on mobile */
+        margin-bottom: 20px;
+    }
+    .collapsible-content p { /* Adjust paragraphs within content on mobile */
+        padding: 0 5px;
+    }
+
+    /* Our Drinks menu section mobile adjustments */
+    .menu-section {
+        padding: 30px 15px; /* Less padding on mobile */
+    }
+
+    .menu-section h2 {
+        font-size: 1.8em; /* Smaller main heading on mobile, same as About Us h2 */
+        margin-bottom: 30px;
+    }
+
+    .menu-category {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .menu-category h3 {
+        font-size: 1.6em; /* Smaller category heading on mobile */
+        margin-bottom: 15px;
+    }
+
+    .drink-item h4 {
+        font-size: 1.6em; /* Adjusted drink name size for mobile */
+    }
+
+    .drink-item p {
+        font-size: 0.85em; /* Adjusted smaller description on mobile */
+    }
+
+    .footer {
+        font-size: 16px; /* Smaller footer text on mobile */
+        padding: 15px;
+    }
+
+    .social-links p {
+        font-size: 0.8em; /* Smaller "Follow Us" on mobile */
+    }
+
+    .social-icon {
+        width: 30px; /* Smaller social icons on mobile */
+    }
+}
