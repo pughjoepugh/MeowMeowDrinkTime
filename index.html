@@ -10,18 +10,63 @@
 <body>
     <div class="landing-image">
     </div>
-    <button class="menu-button" onclick="toggleDropdown()">
-        <span>&#9776;</span>
-    </button>
+    <section class="about-us-section">
+    <h2>Our Story at Meow Meow Drink Time</h2>
+    <button class="collapsible-button" aria-expanded="false" aria-controls="aboutUsContent">Read More</button>
+    <div class="collapsible-content" id="aboutUsContent" hidden>
+        <p>Welcome to Meow Meow Drink Time! We're Joe and Suzy, two cocktail kittens who love crafting unique and delicious beverages. Our journey began with a simple idea: combine our passion for adorable felines with our knack for creating delightful drinks. What started as a fun experiment for friends quickly blossomed into a pop-up concept, bringing joy (and tasty sips!) to the community.</p>
+        <p>At Meow Meow Drink Time, every drink is made with love and a sprinkle of cat-inspired magic. We focus on fresh ingredients, innovative flavors, and bring a cozy atmosphere that celebrates all things feline.</p>
+        <p>Join us on this purr-fect adventure! We look forward to sharing our passion for great drinks and cute cats with you. Keep an eye on our Instagram for upcoming pop-up dates and locations!</p>
+    </div>
+    </section>
+    <section class="menu-section">
+    <h2>Our Delicious Drinks</h2>
 
-    <div class="menu-dropdown" id="dropdown">
-        <ul>
-            <li><a href="index.html">Meow Meow</a></li>
-            <li><a href="black.html">Black Cat Menu</a></li>
-            <li><a href="events.html">Dates</a></li>
-        </ul>
+    <div class="menu-category">
+        <div class="drink-item">
+            <h4>Meow Meow Drink Time</h4>
+            <p>Clairified, 52 proof</p>
+            <p>A tropical milk punch blending last word and corn & oil vibes.</p>
+            <p>Saint Benevolence Clairin Rum, Dolin Genepy, BroVo Lucky Falernum, Coconut Cream, Lime, CBD Oil</p>
+        </div>
+        <div class="drink-item">
+            <h4>Japanese Kitten Valkyrie</h4>
+            <p>Stirred, 58 proof</p>
+            <p>We are martini drinkers, and believe everyone else is too. You might just not have found the right one.</p>
+            <p>This one is built with Joe in mind. </p>
+            <p>Roku Gin, Ford's Gin, Yzaguirre Dry Vermouth, Carpano Bianco Vermouth, Saline, Scrappy's Bergamot Bitters</p>
+        </div>
+        <div class="drink-item">
+            <h4>Siamese</h4>
+            <p>Built, 40 proof</p>
+            <p>Cats are crazy, cats are weird, and cats are wild.</p>
+            <p>This cocktail was designed to stretch your palette.</p>
+            <p>Sass Winery Pinot Gris, Apaluz Mezcal, Salers Apertif, Blue Cheese Stuffed Kalamata Olive</p>
+        </div>
+        <div class="drink-item">
+            <h4>Polka Dot Tiger</h4>
+            <p>Shaken, 37 proof</p>
+            <p>Adult Hawaiian Fruit Punch</p>
+            <p>To make mamajuana we age rum and wine on wood and bark staves, mixed with some spices. Aging last about a month</p>
+            <p>Mamajuana, Meletti Bitter, Apertif, Lime, Orange, Orgeat, Orange Flower Water</p>
+        </div>
+        <div class="drink-item">
+            <h4>Nine Lives, No Time To Waste</h4>
+            <p>Built, 55 proof</p>
+            <p>Sly, with cat like reflexes. What if James Bond didn't drink the Vesper?</p>
+            <p>Original Idea behind this was 'martini & soda'. And there is just one Vodka martini I like to drink.</p>
+            <p>Khor Ukranian Vodka, Yzaguirre Dry Vermouth, Ardbeg Scotch Rinse, Cascade Sparkling Water</p>
+        </div>
+        <div class="drink-item">
+            <h4>Fluffy</h4>
+            <p>Whipped, 17 proof</p>
+            <p>Dessert Cocktail</p>
+            <p>A Syllabub (sill-uh-bub) with booze. Think fancy whipped cream with brandy/coffee soaked Nilla Wafers.</p>
+            <p>Cream, Darville Brandy, Borghetti Coffee Liqueur, White Chocolate Liqueur, Matcha</p>
+        </div>
     </div>
 
+</section>
     <footer class="footer">
         <div class="social-links">
             <p>Follow Us:</p>
@@ -33,12 +78,6 @@
             <br>Created by Joe & Suzy
         </p>
     </footer>
-    
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById("dropdown");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
