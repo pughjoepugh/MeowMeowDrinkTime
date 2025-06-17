@@ -118,6 +118,58 @@ p {
     padding: 20px;
     text-align: center;
 }
+/* --- Social Links Styling --- */
+.social-links {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background for the section */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.social-links p {
+    font-family: 'Pacifico', cursive; /* Use your Pacifico font for the "Follow Us" text */
+    font-size: 1.5em; /* Larger font size */
+    color: #ff53acd8; /* Your accent color */
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-block; /* Allows side-by-side icons */
+    margin: 0 15px; /* Spacing between icons */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-links a:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.social-icon {
+    width: 50px; /* Size of the social media icons */
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(6000%) hue-rotate(290deg) brightness(100%) contrast(100%); /* Makes the SVG pinkish to match your theme */
+}
+
+/* Adjust footer credit text */
+.footer-credit {
+    font-family: Arial, sans-serif; /* Use Arial for this text if Pacifico is too much */
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Slightly faded white */
+    margin-top: 10px;
+}
+
+/* Further update for the main .footer itself */
+.footer {
+    background-color: black;
+    font-family: 'Pacifico', cursive; /* Keep for the overall footer feel if desired */
+    font-size: 22px; /* Adjust the font size as needed */
+    color: #ff53acd8; /* Your accent color */
+    padding: 20px;
+    text-align: center;
+    /* Remove redundant margin-bottom here if you have it from other rules, or add it for spacing */
+    margin-top: 50px; /* Add some space above the footer */
+}
 
 /* --- Media Queries for Mobile Responsiveness --- */
 
