@@ -215,7 +215,7 @@ p {
 
 /* Further update for the main .footer itself */
 .footer {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
     font-family: 'Pacifico', cursive; /* Keep for the overall footer feel if desired */
     font-size: 22px; /* Adjust the font size as needed */
     color: #ff53acd8; /* Your accent color */
