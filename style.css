@@ -161,7 +161,7 @@ p {
     max-width: 600px; /* Limit description width for readability */
     margin-left: 0; /* NEW: Remove auto margin for left alignment */
     margin-right: auto;
-    margin-bottom: 0.5em; /* Small margin for spacing between description lines */
+    margin-bottom: 0; /* Small margin for spacing between description lines */
 }
 
 
