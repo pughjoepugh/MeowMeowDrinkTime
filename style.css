@@ -148,7 +148,6 @@ p {
 .social-icon {
     width: 50px; /* Size of the social media icons */
     height: auto;
-    filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(6000%) hue-rotate(290deg) brightness(100%) contrast(100%); /* Makes the SVG pinkish to match your theme */
 }
 
 /* Adjust footer credit text */
